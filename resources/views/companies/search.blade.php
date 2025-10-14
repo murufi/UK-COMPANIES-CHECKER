@@ -36,5 +36,3 @@
     <button class="btn btn-primary mt-3">Filter</button>
 </form>
 @endsection
-
-https://gist.github.com/murufi/52a69e291e3dd3a37a0a35f57136b571
