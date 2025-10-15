@@ -94,6 +94,7 @@ public function work()
     $userName = 'Rufai SoftCode';
 
     ApiQueries::dispatch($userName);
+    return response->json()
 }
 
 
