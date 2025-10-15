@@ -13,16 +13,16 @@ class ApiQueries implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 
-    protected $userId;
+    protected $userName;
 
     /**
      * Create a new job instance.
      *
      * @return void
      */
-    public function __construct($userId)
+    public function __construct($userName)
     {
-        $this->UserId = $userId;
+        $this->userName = $userName;
     }
 
     /**
@@ -32,6 +32,6 @@ class ApiQueries implements ShouldQueue
      */
     public function handle()
     {
-        echo $userId;
+        \Log::info("Welcome, ".$this->userName." ,you ar successfully created");
     }
 }

@@ -53,4 +53,6 @@ Route::get('/companies/suggest', [CompanyController::class, 'suggest'])->name('c
 // Chart data API
 Route::get('/companies/chart-data', [CompanyController::class, 'chartData'])->name('companies.chartData');
 
+Route::get('/job', [CompanyController::class, 'work']);
+
 

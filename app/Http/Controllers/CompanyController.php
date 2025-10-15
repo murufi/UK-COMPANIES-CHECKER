@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Jobs\ApiQueries;
 
 
 use App\Services\CompaniesHouseService;
@@ -86,6 +87,13 @@ public function officers($number)
     $officers = $this->companiesHouse->get("company/{$number}/officers");
     // return view('companies.officers', compact('officers'));
     return response()->json($officers);
+}
+
+public function work()
+{
+    $userName = 'Rufai SoftCode';
+
+    ApiQueries::dispatch($userName);
 }
 
 
